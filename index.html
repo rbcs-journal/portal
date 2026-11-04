@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBCS — Revista Brasileira de Computação e Software Científico</title>
+  <meta name="description" content="Periódico científico de acesso aberto e revisão por pares transparente focado em software livre para computação, bioinformática e saúde.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-slate-900">RBCS</span>
+          <span class="hidden md:inline-block text-xs text-slate-500 font-medium ml-2 pl-2 border-l border-slate-300">Revista Brasileira de Computação e Software Científico</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+        <a href="#sobre" class="hover:text-emerald-600 transition">Sobre</a>
+        <a href="#trilhas" class="hover:text-emerald-600 transition">Trilhas</a>
+        <a href="#como-funciona" class="hover:text-emerald-600 transition">Como Funciona</a>
+        <a href="#artigos" class="hover:text-emerald-600 transition">Artigos Publicados</a>
+        <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" target="_blank" class="hover:text-emerald-600 transition">Diretrizes</a>
+      </nav>
+      <div class="flex items-center space-x-3">
+        <a href="https://github.com/rbcs-journal" target="_blank" class="text-slate-600 hover:text-slate-900 text-lg p-2">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition shadow-sm">
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+          <span>Submeter Software</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-950/60 border border-emerald-500/30 rounded-full text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Revisão por Pares Aberta & Código Aberto no GitHub</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        O Periódico Científico do <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Software Aberto Brasileiro</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+        A <strong>RBCS</strong> reconhece e publica pesquisas orientadas a ferramentas computacionais abertas. Avaliamos código, testes, documentação e reprodutibilidade com revisão transparente orientada ao ecossistema nacional.
+      </p>
+      <div class="pt-4 flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-lg text-base transition shadow-lg inline-flex items-center space-x-2">
+          <i class="fa-solid fa-upload"></i>
+          <span>Submeter seu Repositório</span>
+        </a>
+        <a href="#artigos" class="bg-slate-700 hover:bg-slate-600 text-white font-medium px-6 py-3 rounded-lg text-base transition border border-slate-600 inline-flex items-center space-x-2">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Explorar Acervo</span>
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center border-t border-slate-700/60">
+        <div class="p-4">
+          <div class="text-3xl font-extrabold text-emerald-400">100%</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Código Aberto (OSI)</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl font-extrabold text-teal-300">R$ 0</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Sem Taxas (No APC)</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl font-extrabold text-emerald-400">GitHub</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Revisão Transparente</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl font-extrabold text-teal-300">DOI</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Depósito Permanente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trilhas Editoriais -->
+  <section id="trilhas" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Trilhas Editoriais Especializadas</h2>
+        <p class="text-slate-600 mt-2">Corpo editorial composto por pesquisadores líderes em cada domínio da computação científica.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Trilha 1 -->
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-emerald-500 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Bioinformática & Ômicas</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Genômica comparativa, transcriptômica, proteômica, filogenética, metagenômica e pipelines reproduzíveis (Nextflow/Snakemake).
+          </p>
+        </div>
+
+        <!-- Trilha 2 -->
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-emerald-500 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Computação Biomédica</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Processamento de imagens médicas (DICOM/NIfTI), análise de sinais fisiológicos (ECG/EEG), informática clínica e prontuários eletrônicos.
+          </p>
+        </div>
+
+        <!-- Trilha 3 -->
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-emerald-500 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">IA & Ciência de Dados</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Algoritmos de aprendizado profundo, modelos preditivos em saúde, mineração de textos científicos e modelos interpretáveis.
+          </p>
+        </div>
+
+        <!-- Trilha 4 -->
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-emerald-500 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Computação Científica</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Métodos numéricos, simulações computacionais, processamento paralelo e distribuído, e bibliotecas de algoritmos de uso geral.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona o Processo Editorial -->
+  <section id="como-funciona" class="py-16 bg-slate-100/70 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Como Funciona a Revisão por Pares</h2>
+        <p class="text-slate-600 mt-2">Inspirada no modelo JOSS: direta, ágil, transparente e orientada a código funcional.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded">Etapa 1</span>
+          <h4 class="font-bold text-slate-900 mt-3 mb-1">Submissão via Issue</h4>
+          <p class="text-xs text-slate-600">O autor submete a URL do repositório no GitHub contendo o código, <code>paper.md</code> e <code>paper.bib</code>.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded">Etapa 2</span>
+          <h4 class="font-bold text-slate-900 mt-3 mb-1">Pre-Review & Editor</h4>
+          <p class="text-xs text-slate-600">O Editor-Chefe faz a triagem de escopo e designa um Editor de Trilha especializado para coordenar a revisão.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <span class="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded">Etapa 3</span>
+          <h4 class="font-bold text-slate-900 mt-3 mb-1">Checklist Aberto</h4>
+          <p class="text-xs text-slate-600">Dois revisores avaliam a instalação, testes, documentação e artigo, dialogando abertamente com os autores.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <span class="text-xs font-bold px-2 py-1 bg-emerald-100 text-emerald-700 rounded">Etapa 4</span>
+          <h4 class="font-bold text-slate-900 mt-3 mb-1">Aceite & DOI</h4>
+          <p class="text-xs text-slate-600">Após aprovação, o compilador Inara gera o PDF final com JATS XML e o artigo recebe um DOI permanente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artigos Publicados -->
+  <section id="artigos" class="py-16 bg-white flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold text-slate-900">Artigos Publicados</h2>
+          <p class="text-slate-600 text-sm mt-1">Explore os softwares científicos revisados e publicados pela RBCS.</p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <input type="text" id="searchInput" placeholder="Buscar por título, autor, tag..." class="px-4 py-2 border border-slate-300 rounded-lg text-sm w-64 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+      </div>
+
+      <!-- Container dos Artigos -->
+      <div id="papersList" class="space-y-4">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-2 text-white font-bold text-lg mb-3">
+          <i class="fa-solid fa-code text-emerald-400"></i>
+          <span>RBCS</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Revista Brasileira de Computação e Software Científico. Periódico de acesso aberto diamante dedicado ao reconhecimento do software de pesquisa no Brasil.
+        </p>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold mb-3">Links Importantes</h5>
+        <ul class="space-y-2 text-xs">
+          <li><a href="https://github.com/rbcs-journal/reviews" class="hover:text-emerald-400">Repositório de Reviews</a></li>
+          <li><a href="https://github.com/rbcs-journal/papers" class="hover:text-emerald-400">Acervo Permanente (Papers)</a></li>
+          <li><a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" class="hover:text-emerald-400">Diretrizes para Autores</a></li>
+          <li><a href="https://github.com/rbcs-journal/.github/blob/main/CODE_OF_CONDUCT.md" class="hover:text-emerald-400">Código de Conduta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold mb-3">Licenciamento & Acesso Aberto</h5>
+        <p class="text-xs text-slate-400 leading-relaxed mb-3">
+          Conteúdo dos artigos publicado sob licença <a href="https://creativecommons.org/licenses/by/4.0/" class="text-emerald-400 hover:underline">CC-BY 4.0</a>. Códigos dos softwares sob licenças de código aberto aprovadas pela OSI.
+        </p>
+        <div class="text-xs text-slate-500">
+          © 2026 RBCS Journal • Mantido pela comunidade científica aberta.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const samplePapers = [
+      {
+        id: "rbcs.0001",
+        year: 2026,
+        volume: 1,
+        title: "PyBioCluster: Um pacote aberto para agrupamento e análise comparativa de dados genômicos",
+        authors: "Fabiano Menegidio (LaBiOmicS)",
+        track: "Bioinformática & Biologia Computacional",
+        doi: "10.5281/zenodo.rbcs.0001",
+        tags: ["Python", "Bioinformática", "Genômica", "Single-Cell"],
+        repoUrl: "https://github.com/LaBiOmicS/pybiocluster",
+        reviewUrl: "https://github.com/rbcs-journal/reviews/issues/1",
+        date: "04 Nov 2026"
+      }
+    ];
+
+    function renderPapers(papers) {
+      const container = document.getElementById("papersList");
+      if (papers.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-50 rounded-lg">Nenhum artigo encontrado.</div>`;
+        return;
+      }
+      container.innerHTML = papers.map(p => `
+        <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-sm transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              ${p.track}
+            </span>
+            <span class="text-xs text-slate-500">Publicado em ${p.date} • Vol. ${p.volume} (${p.year})</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 hover:text-emerald-600 transition mb-1">
+            <a href="${p.repoUrl}" target="_blank">${p.title}</a>
+          </h3>
+          <p class="text-sm text-slate-600 mb-3">${p.authors}</p>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            ${p.tags.map(t => `<span class="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 rounded">#${t}</span>`).join('')}
+          </div>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-medium pt-3 border-t border-slate-100">
+            <a href="${p.repoUrl}" target="_blank" class="text-slate-700 hover:text-emerald-600 flex items-center space-x-1">
+              <i class="fa-brands fa-github text-sm"></i>
+              <span>Repositório</span>
+            </a>
+            <a href="${p.reviewUrl}" target="_blank" class="text-slate-700 hover:text-emerald-600 flex items-center space-x-1">
+              <i class="fa-solid fa-comments text-sm"></i>
+              <span>Revisão por Pares</span>
+            </a>
+            <span class="text-slate-500 flex items-center space-x-1">
+              <i class="fa-solid fa-fingerprint text-sm"></i>
+              <span>DOI: ${p.doi}</span>
+            </span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderPapers(samplePapers);
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase();
+      const filtered = samplePapers.filter(p => 
+        p.title.toLowerCase().includes(q) ||
+        p.authors.toLowerCase().includes(q) ||
+        p.track.toLowerCase().includes(q) ||
+        p.tags.some(t => t.toLowerCase().includes(q))
+      );
+      renderPapers(filtered);
+    });
+  </script>
+</body>
+</html>
