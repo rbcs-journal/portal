@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RBCS — Revista Brasileira de Computação e Software Científico</title>
-  <meta name="description" content="Periódico científico de acesso aberto diamante nos moldes do JOSS para publicação de software de pesquisa em computação e bioinformática.">
+  <meta name="description" content="Periódico científico brasileiro de acesso aberto diamante com DOIs via Zenodo (CERN) e revisão por pares aberta no GitHub para software de pesquisa e bioinformática.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
@@ -12,7 +12,6 @@
     body { font-family: 'Source Sans 3', sans-serif; }
     code, pre { font-family: 'Source Code Pro', monospace; }
     .orcid-icon { color: #A6CE39; }
-    .joss-border { border-color: #e5e7eb; }
     .tab-active { border-bottom: 3px solid #059669; color: #059669; font-weight: 600; }
   </style>
 </head>
@@ -36,10 +35,10 @@
       <!-- Right Navigation Items -->
       <div class="flex items-center space-x-4 text-sm font-normal text-gray-700">
         <nav class="hidden lg:flex items-center space-x-6">
-          <a href="#about" class="hover:text-emerald-600 transition" data-i18n="nav_about">About</a>
-          <a href="#papers" class="hover:text-emerald-600 transition" data-i18n="nav_papers">Papers</a>
-          <a href="#tracks" class="hover:text-emerald-600 transition" data-i18n="nav_tracks">Tracks</a>
-          <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" target="_blank" class="hover:text-emerald-600 transition" data-i18n="nav_docs">Docs</a>
+          <a href="#about" class="hover:text-emerald-600 transition" data-i18n="nav_about">Sobre</a>
+          <a href="#papers" class="hover:text-emerald-600 transition" data-i18n="nav_papers">Artigos</a>
+          <a href="#tracks" class="hover:text-emerald-600 transition" data-i18n="nav_tracks">Trilhas</a>
+          <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" target="_blank" class="hover:text-emerald-600 transition" data-i18n="nav_docs">Diretrizes</a>
         </nav>
 
         <!-- Trilingual Switcher (PT | EN | ES) -->
@@ -49,7 +48,7 @@
           <button onclick="setLanguage('es')" id="lang-es" class="px-2 py-0.5 rounded text-gray-600 hover:text-gray-900">ES</button>
         </div>
 
-        <!-- ORCID Connect Button (Classic JOSS feature) -->
+        <!-- ORCID Connect Button -->
         <a href="https://orcid.org/signin" target="_blank" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 border border-gray-300 rounded text-xs font-medium text-gray-700 bg-white hover:bg-gray-50 transition shadow-xs">
           <i class="fa-brands fa-orcid orcid-icon text-sm"></i>
           <span>ORCID</span>
@@ -58,18 +57,18 @@
         <!-- Submit Button -->
         <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="inline-flex items-center space-x-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded text-xs font-semibold transition shadow-xs">
           <i class="fa-solid fa-cloud-arrow-up text-xs"></i>
-          <span data-i18n="btn_submit">Submit Paper</span>
+          <span data-i18n="btn_submit">Submeter Artigo</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- JOSS Global Announcement Banner -->
+  <!-- Global Announcement Banner -->
   <div class="bg-emerald-50 border-b border-emerald-200 text-emerald-900 px-4 py-2 text-xs">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
         <i class="fa-solid fa-circle-info text-emerald-600"></i>
-        <span data-i18n="banner_announcement">A RBCS aceita submissões abertas de software científico em Português, Inglês e Espanhol. Toda a revisão é conduzida publicamente no GitHub.</span>
+        <span data-i18n="banner_announcement">Periódico aberto nos moldes do JOSS com DOIs via Zenodo (CERN). Revisão transparente e gratuita para autores e leitores.</span>
       </div>
       <a href="https://github.com/rbcs-journal/reviews" target="_blank" class="font-bold underline hover:text-emerald-700 ml-4 hidden sm:inline" data-i18n="banner_link">Ver no GitHub →</a>
     </div>
@@ -82,41 +81,41 @@
     <main class="lg:col-span-8 space-y-6">
       
       <!-- Welcome Hero Message -->
-      <section class="bg-white p-6 rounded-lg border border-gray-200 shadow-xs space-y-3">
+      <section id="about" class="bg-white p-6 rounded-lg border border-gray-200 shadow-xs space-y-3">
         <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight" data-i18n="hero_title">
-          The Journal of Open Source Software (RBCS)
+          Revista Brasileira de Computação e Software Científico (RBCS)
         </h1>
         <p class="text-sm text-gray-600 leading-relaxed font-normal" data-i18n="hero_desc">
-          A <strong>Revista Brasileira de Computação e Software Científico</strong> é um periódico de acesso aberto diamante para ferramentas e pacotes de pesquisa. Avaliamos qualidade do código, documentação, testes unitários e relevância científica através de revisão por pares aberta nos issues do GitHub.
+          A <strong>RBCS</strong> é um periódico científico brasileiro de acesso aberto diamante (*Diamond OA*) para software de pesquisa, seguindo rigorosamente as premissas e a arquitetura técnica do JOSS. Avaliamos qualidade do código, documentação, testes unitários e reprodutibilidade com revisão por pares pública nos issues do GitHub.
         </p>
         <div class="pt-2 flex flex-wrap gap-2 text-xs">
           <span class="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
-            <i class="fa-solid fa-certificate text-emerald-600 mr-1"></i> Diamond Open Access
+            <i class="fa-solid fa-certificate text-emerald-600 mr-1"></i> Diamond Open Access (R$ 0 / No APC)
           </span>
           <span class="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
-            <i class="fa-brands fa-osi text-green-600 mr-1"></i> OSI-Approved Licenses
+            <i class="fa-brands fa-osi text-green-600 mr-1"></i> Licença Aberta (OSI)
           </span>
           <span class="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
-            <i class="fa-solid fa-code-compare text-blue-600 mr-1"></i> Transparent GitHub Reviews
+            <i class="fa-solid fa-code-compare text-blue-600 mr-1"></i> Revisão Aberta no GitHub
           </span>
-          <span class="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
-            <i class="fa-solid fa-fingerprint text-purple-600 mr-1"></i> Permanent Crossref/Zenodo DOIs
+          <span class="inline-flex items-center px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 font-medium">
+            <i class="fa-solid fa-fingerprint text-purple-600 mr-1"></i> DOI Permanente via Zenodo (CERN)
           </span>
         </div>
       </section>
 
       <!-- JOSS Tabs: Published Papers vs Active Papers in Review -->
-      <section class="bg-white rounded-lg border border-gray-200 shadow-xs overflow-hidden">
+      <section id="papers" class="bg-white rounded-lg border border-gray-200 shadow-xs overflow-hidden">
         
         <!-- Tab Headers -->
         <div class="border-b border-gray-200 flex px-6 pt-3 space-x-6 text-sm font-medium">
           <button onclick="switchTab('published')" id="tab-published" class="pb-3 tab-active flex items-center space-x-2">
-            <span data-i18n="tab_published">Published Papers</span>
+            <span data-i18n="tab_published">Artigos Publicados</span>
             <span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded-full font-bold" id="published-count">1</span>
           </button>
           <button onclick="switchTab('review')" id="tab-review" class="pb-3 text-gray-500 hover:text-gray-900 transition flex items-center space-x-2">
-            <span data-i18n="tab_active">Papers in Review</span>
-            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+            <span data-i18n="tab_active">Submissões em Revisão</span>
+            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full font-bold" id="review-count">0</span>
           </button>
         </div>
 
@@ -124,11 +123,11 @@
         <div class="p-4 bg-gray-50/70 border-b border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="relative w-full sm:w-72">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-xs"></i>
-            <input type="text" id="searchInput" placeholder="Search papers, authors, tags..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-emerald-500">
+            <input type="text" id="searchInput" placeholder="Buscar por título, autor, tag..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-emerald-500">
           </div>
           <div class="flex items-center space-x-2 w-full sm:w-auto">
             <select id="trackFilter" class="w-full sm:w-auto px-2 py-1.5 text-xs bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-emerald-500 text-gray-700">
-              <option value="all" data-i18n="filter_all_tracks">All Tracks</option>
+              <option value="all" data-i18n="filter_all_tracks">Todas as Trilhas</option>
               <option value="Bioinformática & Biologia Computacional">Bioinformática & Ômicas</option>
               <option value="Computação Biomédica & Informática em Saúde">Computação Biomédica</option>
               <option value="Inteligência Artificial & Ciência de Dados">IA & Ciência de Dados</option>
@@ -142,14 +141,15 @@
           <!-- Populated by JavaScript -->
         </div>
 
-        <!-- Active Reviews List View -->
-        <div id="reviewView" class="p-8 text-center text-gray-500 text-sm hidden">
-          <i class="fa-solid fa-clock-rotate-left text-3xl text-gray-300 mb-2"></i>
-          <p class="font-medium text-gray-700" data-i18n="no_active_reviews">Nenhuma submissão em revisão neste momento.</p>
-          <p class="text-xs text-gray-500 mt-1" data-i18n="no_active_sub">Submeta seu repositório para iniciar uma nova rodada de revisão por pares aberta!</p>
-          <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="mt-4 inline-block px-4 py-2 bg-emerald-600 text-white rounded text-xs font-semibold hover:bg-emerald-700 transition">
-            Iniciar Submissão
-          </a>
+        <!-- Active Reviews List View (Dynamic from GitHub Issues) -->
+        <div id="reviewView" class="divide-y divide-gray-100 hidden">
+          <div id="activeReviewsList" class="p-4 space-y-3">
+            <!-- Loaded dynamically from GitHub API -->
+            <div class="p-8 text-center text-gray-500 text-sm">
+              <i class="fa-solid fa-spinner fa-spin text-2xl text-emerald-600 mb-2"></i>
+              <p>Consultando submissões ativas no GitHub...</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -160,18 +160,29 @@
       
       <!-- Submission Callout Box -->
       <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-xs space-y-3">
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_submit_title">Submit a Paper</h3>
+        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_submit_title">Submeter um Artigo</h3>
         <p class="text-xs text-gray-600 leading-relaxed" data-i18n="sidebar_submit_desc">
-          Tem um pacote ou ferramenta de código aberto para computação, bioinformática ou saúde? Submeta diretamente via formulário do GitHub.
+          Tem um software ou pacote científico aberto para computação, bioinformática ou saúde? A submissão é pública e direta via formulário do GitHub.
         </p>
         <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="block text-center w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded text-xs font-bold transition shadow-xs" data-i18n="sidebar_submit_btn">
-          Start Submission Process
+          Iniciar Submissão no GitHub
         </a>
       </div>
 
-      <!-- Editorial Tracks Accordion/Widget -->
+      <!-- Zenodo DOI Callout -->
+      <div class="bg-purple-50 p-4 rounded-lg border border-purple-200 text-xs space-y-2">
+        <div class="flex items-center space-x-2 text-purple-900 font-bold">
+          <i class="fa-solid fa-fingerprint text-purple-700 text-base"></i>
+          <span>Zenodo DOI (CERN)</span>
+        </div>
+        <p class="text-purple-800 leading-relaxed">
+          Todos os artigos e softwares aceitos são arquivados permanentemente no <strong>Zenodo</strong> (CERN), gerando DOIs cíveis no padrão <code>10.5281/zenodo.XXXXXXX</code> com preservação digital de longo prazo.
+        </p>
+      </div>
+
+      <!-- Editorial Tracks Widget -->
       <div id="tracks" class="bg-white p-5 rounded-lg border border-gray-200 shadow-xs space-y-3">
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_tracks_title">Editorial Tracks</h3>
+        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_tracks_title">Trilhas Editoriais</h3>
         <ul class="text-xs space-y-2.5 text-gray-700">
           <li class="flex items-start space-x-2">
             <span class="text-blue-600 mt-0.5"><i class="fa-solid fa-dna"></i></span>
@@ -204,20 +215,20 @@
         </ul>
       </div>
 
-      <!-- Review Criteria & Checklist Box -->
+      <!-- Review Criteria Box -->
       <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-xs space-y-2.5">
-        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_review_title">Peer Review Criteria</h3>
+        <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider" data-i18n="sidebar_review_title">Critérios de Avaliação JOSS</h3>
         <p class="text-xs text-gray-600" data-i18n="sidebar_review_desc">Nossos revisores avaliam rigorosamente:</p>
         <ul class="text-xs space-y-1.5 text-gray-600 list-disc list-inside">
           <li data-i18n="crit_license">Licença OSI em arquivo <code>LICENSE</code></li>
-          <li data-i18n="crit_install">Instalação reprodutível</li>
+          <li data-i18n="crit_install">Instalação reproduzível</li>
           <li data-i18n="crit_tests">Suíte de testes automatizados</li>
           <li data-i18n="crit_docs">Documentação e exemplos claros</li>
           <li data-i18n="crit_need">Declaração de necessidade no <code>paper.md</code></li>
         </ul>
         <div class="pt-2">
           <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/reviewer_guidelines.md" target="_blank" class="text-xs text-emerald-600 hover:text-emerald-800 font-medium underline" data-i18n="sidebar_reviewer_guide_link">
-            Reviewer Guidelines & Checklist →
+            Checklist e Diretrizes do Revisor →
           </a>
         </div>
       </div>
@@ -226,7 +237,7 @@
       <div class="bg-gray-100 p-4 rounded-lg border border-gray-300 text-xs space-y-2">
         <div class="flex items-center space-x-2 text-gray-900 font-bold">
           <i class="fa-solid fa-robot text-emerald-600"></i>
-          <span>Automated @editorialbot</span>
+          <span>Automação @editorialbot / @rbcs-bot</span>
         </div>
         <p class="text-gray-600">
           O bot editorial coordena compilação de prévias via Inara e auditorias de conformidade com comandos de primeira linha como <code>@editorialbot check repository</code> e <code>@editorialbot generate pdf</code>.
@@ -236,26 +247,26 @@
     </aside>
   </div>
 
-  <!-- JOSS Standard Footer -->
+  <!-- Standard Footer -->
   <footer class="bg-white border-t border-gray-200 py-8 text-xs text-gray-500 mt-auto">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="space-y-1 text-center md:text-left">
-        <div class="font-bold text-gray-800">
+        <div class="font-bold text-gray-800" data-i18n="footer_title">
           Revista Brasileira de Computação e Software Científico (RBCS)
         </div>
         <div>
-          Published by the RBCS Open Science Community • ISSN Pending (IBICT) • Inspired by <a href="https://joss.theoj.org" target="_blank" class="text-emerald-600 hover:underline">JOSS / Open Journals</a>
+          Periódico de Acesso Aberto Diamante • Depósito de DOI via <a href="https://zenodo.org" target="_blank" class="text-purple-700 font-semibold hover:underline">Zenodo (CERN)</a> • Baseado na arquitetura do <a href="https://joss.theoj.org" target="_blank" class="text-emerald-600 hover:underline">JOSS / Open Journals</a>
         </div>
         <div>
-          Paper text licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-emerald-600 hover:underline">Creative Commons Attribution 4.0 International (CC-BY 4.0)</a>.
+          Texto dos artigos sob licença <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-emerald-600 hover:underline">Creative Commons Attribution 4.0 International (CC-BY 4.0)</a>. Código sob licença aberta (OSI).
         </div>
       </div>
       <div class="flex items-center space-x-4">
         <a href="https://github.com/rbcs-journal" target="_blank" class="text-gray-600 hover:text-gray-900 text-base" title="GitHub Org">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" target="_blank" class="text-gray-600 hover:text-emerald-600" data-i18n="footer_guidelines">Guidelines</a>
-        <a href="https://github.com/rbcs-journal/.github/blob/main/CODE_OF_CONDUCT.md" target="_blank" class="text-gray-600 hover:text-emerald-600" data-i18n="footer_conduct">Code of Conduct</a>
+        <a href="https://github.com/rbcs-journal/reviews/blob/main/docs/author_guidelines.md" target="_blank" class="text-gray-600 hover:text-emerald-600" data-i18n="footer_guidelines">Diretrizes</a>
+        <a href="https://github.com/rbcs-journal/.github/blob/main/CODE_OF_CONDUCT.md" target="_blank" class="text-gray-600 hover:text-emerald-600" data-i18n="footer_conduct">Código de Conduta</a>
       </div>
     </div>
   </footer>
@@ -269,18 +280,16 @@
         nav_tracks: "Trilhas",
         nav_docs: "Diretrizes",
         btn_submit: "Submeter Artigo",
-        banner_announcement: "A RBCS aceita submissões abertas de software científico em Português, Inglês e Espanhol. Toda a revisão é conduzida publicamente no GitHub.",
+        banner_announcement: "Periódico aberto nos moldes do JOSS com DOIs via Zenodo (CERN). Revisão transparente e gratuita para autores e leitores.",
         banner_link: "Ver no GitHub →",
-        hero_title: "The Journal of Open Source Software (RBCS)",
-        hero_desc: "A Revista Brasileira de Computação e Software Científico é um periódico de acesso aberto diamante para ferramentas e pacotes de pesquisa. Avaliamos qualidade do código, documentação, testes unitários e relevância científica através de revisão por pares aberta nos issues do GitHub.",
+        hero_title: "Revista Brasileira de Computação e Software Científico (RBCS)",
+        hero_desc: "A RBCS é um periódico científico brasileiro de acesso aberto diamante (Diamond OA) para software de pesquisa, seguindo rigorosamente as premissas e a arquitetura técnica do JOSS. Avaliamos qualidade do código, documentação, testes unitários e reprodutibilidade com revisão por pares pública nos issues do GitHub.",
         tab_published: "Artigos Publicados",
-        tab_active: "Artigos em Revisão",
+        tab_active: "Submissões em Revisão",
         filter_all_tracks: "Todas as Trilhas",
-        no_active_reviews: "Nenhuma submissão em revisão aberta neste momento.",
-        no_active_sub: "Submeta seu repositório para iniciar uma nova rodada de revisão por pares!",
         sidebar_submit_title: "Submeter um Artigo",
-        sidebar_submit_desc: "Tem um pacote ou ferramenta de código aberto para computação, bioinformática ou saúde? Submeta diretamente via formulário do GitHub.",
-        sidebar_submit_btn: "Iniciar Submissão",
+        sidebar_submit_desc: "Tem um software ou pacote científico aberto para computação, bioinformática ou saúde? A submissão é pública e direta via formulário do GitHub.",
+        sidebar_submit_btn: "Iniciar Submissão no GitHub",
         sidebar_tracks_title: "Trilhas Editoriais",
         track1_name: "Bioinformática & Ômicas",
         track1_sub: "Genômica, transcriptômica, filogenia e pipelines.",
@@ -290,14 +299,15 @@
         track3_sub: "Modelos preditivos, deep learning, PLN em saúde.",
         track4_name: "Computação Científica",
         track4_sub: "Métodos numéricos, simulação e HPC.",
-        sidebar_review_title: "Critérios de Avaliação",
+        sidebar_review_title: "Critérios de Avaliação JOSS",
         sidebar_review_desc: "Nossos revisores avaliam rigorosamente:",
         crit_license: "Licença OSI em arquivo LICENSE",
         crit_install: "Instalação reproduzível",
         crit_tests: "Suíte de testes automatizados",
         crit_docs: "Documentação e exemplos claros",
         crit_need: "Declaração de necessidade no paper.md",
-        sidebar_reviewer_guide_link: "Guia e Checklist do Revisor →",
+        sidebar_reviewer_guide_link: "Checklist e Diretrizes do Revisor →",
+        footer_title: "Revista Brasileira de Computação e Software Científico (RBCS)",
         footer_guidelines: "Diretrizes",
         footer_conduct: "Código de Conduta",
         card_download_pdf: "Baixar PDF",
@@ -312,18 +322,16 @@
         nav_tracks: "Tracks",
         nav_docs: "Docs",
         btn_submit: "Submit Paper",
-        banner_announcement: "RBCS welcomes open submissions of scientific software in Portuguese, English, and Spanish. All peer reviews are conducted publicly on GitHub.",
+        banner_announcement: "Open access research software journal following JOSS with Zenodo DOIs (CERN). Transparent, fee-free peer review.",
         banner_link: "View on GitHub →",
-        hero_title: "The Journal of Open Source Software (RBCS)",
-        hero_desc: "The Brazilian Journal of Computing and Scientific Software is a developer-friendly, diamond open access journal for research software packages. We evaluate code quality, documentation, unit tests, and scientific relevance via open peer review on GitHub.",
+        hero_title: "Brazilian Journal of Computing and Scientific Software (RBCS)",
+        hero_desc: "RBCS is a diamond open access journal for research software, built on the principles and open architecture of JOSS. We evaluate code quality, documentation, unit tests, and reproducibility through transparent peer review on GitHub.",
         tab_published: "Published Papers",
         tab_active: "Papers in Review",
         filter_all_tracks: "All Tracks",
-        no_active_reviews: "No submissions currently in open review.",
-        no_active_sub: "Submit your repository to launch a transparent peer review thread!",
         sidebar_submit_title: "Submit a Paper",
-        sidebar_submit_desc: "Do you have an open source package or tool for computing, bioinformatics, or health? Submit directly via GitHub Issues.",
-        sidebar_submit_btn: "Start Submission Process",
+        sidebar_submit_desc: "Do you have open source software for computing, bioinformatics, or health? Submit directly via GitHub Issues.",
+        sidebar_submit_btn: "Start Submission on GitHub",
         sidebar_tracks_title: "Editorial Tracks",
         track1_name: "Bioinformatics & Omics",
         track1_sub: "Genomics, transcriptomics, phylogenetics, workflows.",
@@ -333,7 +341,7 @@
         track3_sub: "Predictive models, deep learning, biomedical NLP.",
         track4_name: "Scientific Computing",
         track4_sub: "Numerical methods, simulations, HPC.",
-        sidebar_review_title: "Peer Review Criteria",
+        sidebar_review_title: "JOSS Peer Review Criteria",
         sidebar_review_desc: "Our referees evaluate according to JOSS guidelines:",
         crit_license: "OSI-approved license in a LICENSE file",
         crit_install: "Reproducible installation",
@@ -341,6 +349,7 @@
         crit_docs: "Clear documentation & examples",
         crit_need: "Statement of need in paper.md",
         sidebar_reviewer_guide_link: "Reviewer Guidelines & Checklist →",
+        footer_title: "Brazilian Journal of Computing and Scientific Software (RBCS)",
         footer_guidelines: "Guidelines",
         footer_conduct: "Code of Conduct",
         card_download_pdf: "Download PDF",
@@ -355,28 +364,26 @@
         nav_tracks: "Secciones",
         nav_docs: "Directrices",
         btn_submit: "Enviar Artículo",
-        banner_announcement: "La RBCS acepta envíos abiertos de software científico en Portugués, Inglés y Español. Toda la revisión se realiza públicamente en GitHub.",
+        banner_announcement: "Revista de software científico según el modelo JOSS con DOIs de Zenodo (CERN). Revisión transparente y sin cargos.",
         banner_link: "Ver en GitHub →",
-        hero_title: "The Journal of Open Source Software (RBCS)",
-        hero_desc: "La Revista Brasileña de Computación y Software Científico es una publicación de acceso abierto diamante para herramientas y paquetes de investigación. Evaluamos calidad del código, documentación, pruebas unitarias y rigor científico en GitHub.",
+        hero_title: "Revista Brasileña de Computación y Software Científico (RBCS)",
+        hero_desc: "La RBCS es una revista científica de acceso abierto diamante para software de investigación, siguiendo las premisas de JOSS. Evaluamos calidad del código, documentación, pruebas unitarias y reproducibilidad en GitHub.",
         tab_published: "Artículos Publicados",
-        tab_active: "Artículos en Revisión",
+        tab_active: "Envíos en Revisión",
         filter_all_tracks: "Todas las Secciones",
-        no_active_reviews: "No hay envíos en revisión en este momento.",
-        no_active_sub: "¡Envíe su repositorio para iniciar una revisión por pares abierta!",
         sidebar_submit_title: "Enviar un Artículo",
-        sidebar_submit_desc: "¿Tiene un paquete o herramienta de código abierto para computación, bioinformática o salud? Envíelo mediante GitHub.",
-        sidebar_submit_btn: "Iniciar Envío",
+        sidebar_submit_desc: "¿Tiene un software abierto para computación, bioinformática o salud? Envíelo directamente mediante GitHub.",
+        sidebar_submit_btn: "Iniciar Envío en GitHub",
         sidebar_tracks_title: "Secciones Editoriales",
         track1_name: "Bioinformática y Ómicas",
         track1_sub: "Genómica, transcriptómica, filogenia y pipelines.",
-        track2_name: "Computación Biomédica",
+        track2_name: "Computação Biomédica",
         track2_sub: "Imágenes médicas (DICOM), señales fisiológicas, EHR.",
         track3_name: "IA y Ciencia de Datos",
         track3_sub: "Modelos predictivos, aprendizaje profundo, PLN en salud.",
         track4_name: "Computación Científica",
         track4_sub: "Métodos numéricos, simulación y HPC.",
-        sidebar_review_title: "Criterios de Evaluación",
+        sidebar_review_title: "Criterios de Evaluación JOSS",
         sidebar_review_desc: "Nuestros revisores evalúan rigurosamente:",
         crit_license: "Licencia OSI en archivo LICENSE",
         crit_install: "Instalación reproducible",
@@ -384,6 +391,7 @@
         crit_docs: "Documentación y ejemplos claros",
         crit_need: "Declaración de necesidad en paper.md",
         sidebar_reviewer_guide_link: "Guía y Checklist del Revisor →",
+        footer_title: "Revista Brasileña de Computación y Software Científico (RBCS)",
         footer_guidelines: "Directrices",
         footer_conduct: "Código de Conducta",
         card_download_pdf: "Descargar PDF",
@@ -434,9 +442,11 @@
         pubTab.className = "pb-3 text-gray-500 hover:text-gray-900 transition flex items-center space-x-2";
         pubView.classList.add('hidden');
         revView.classList.remove('hidden');
+        fetchActiveReviews();
       }
     }
 
+    // Published Papers Data
     const papersData = [
       {
         id: "rbcs.00001",
@@ -451,7 +461,7 @@
         doi: "10.5281/zenodo.rbcs.0001",
         tags: ["Python", "Bioinformatics", "Genomics", "Single-Cell"],
         repoUrl: "https://github.com/rbcs-journal/pybiocluster-demo",
-        reviewUrl: "https://github.com/rbcs-journal/reviews/issues/1",
+        reviewUrl: "https://github.com/rbcs-journal/reviews/issues",
         pdfUrl: "https://github.com/rbcs-journal/papers/tree/main/rbcs.00001",
         date: "04 Nov 2026"
       }
@@ -464,14 +474,12 @@
       const t = translations[currentLang];
       
       if (papers.length === 0) {
-        container.innerHTML = `<div class="p-8 text-center text-gray-500 text-sm">Nenhum artigo encontrado com estes termos de busca.</div>`;
+        container.innerHTML = `<div class="p-8 text-center text-gray-500 text-sm">Nenhum artigo encontrado.</div>`;
         return;
       }
 
       container.innerHTML = papers.map(p => `
         <article class="p-6 hover:bg-gray-50/80 transition space-y-2.5">
-          
-          <!-- Category & Metadata Line -->
           <div class="flex flex-wrap items-center justify-between text-xs text-gray-500 gap-2">
             <span class="inline-flex items-center px-2 py-0.5 rounded font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
               ${p.track}
@@ -479,12 +487,10 @@
             <span>${t.card_published_date} ${p.date} • Vol. ${p.volume} (${p.year})</span>
           </div>
 
-          <!-- Paper Title (Classic JOSS link) -->
           <h2 class="text-base sm:text-lg font-bold text-gray-900 hover:text-emerald-700 transition">
             <a href="${p.repoUrl}" target="_blank">${p.title}</a>
           </h2>
 
-          <!-- Authors with ORCID -->
           <div class="text-xs text-gray-600 flex flex-wrap items-center gap-2">
             ${p.authors.map(a => `
               <span class="inline-flex items-center space-x-1">
@@ -496,14 +502,12 @@
             `).join(', ')}
           </div>
 
-          <!-- Tags -->
           <div class="flex flex-wrap gap-1.5 pt-1">
             ${p.tags.map(tag => `
               <span class="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded">#${tag}</span>
             `).join('')}
           </div>
 
-          <!-- Action Buttons / Links (Classic JOSS card bottom) -->
           <div class="pt-3 border-t border-gray-100 flex flex-wrap items-center gap-4 text-xs font-medium">
             <a href="${p.pdfUrl}" target="_blank" class="text-emerald-700 hover:text-emerald-900 inline-flex items-center space-x-1 font-semibold">
               <i class="fa-solid fa-file-pdf"></i>
@@ -517,14 +521,76 @@
               <i class="fa-solid fa-comments"></i>
               <span>${t.card_review_issue}</span>
             </a>
-            <a href="https://doi.org/${p.doi}" target="_blank" class="text-gray-500 hover:text-gray-800 inline-flex items-center space-x-1">
-              <i class="fa-solid fa-fingerprint"></i>
-              <span>DOI: ${p.doi}</span>
+            <a href="https://doi.org/${p.doi}" target="_blank" class="text-purple-700 hover:text-purple-900 inline-flex items-center space-x-1 font-semibold">
+              <i class="fa-solid fa-fingerprint text-purple-600"></i>
+              <span>Zenodo DOI: ${p.doi}</span>
             </a>
           </div>
-
         </article>
       `).join('');
+    }
+
+    // Dynamic Live Fetch from GitHub for "Papers in Review"
+    async function fetchActiveReviews() {
+      const container = document.getElementById("activeReviewsList");
+      try {
+        const res = await fetch("https://api.github.com/repos/rbcs-journal/reviews/issues?state=open");
+        if (!res.ok) throw new Error("GitHub API status " + res.status);
+        const issues = await res.json();
+        
+        // Filter out issues that are not pre-review or review
+        const reviewIssues = issues.filter(i => 
+          i.labels.some(l => l.name === 'pre-review' || l.name === 'review' || l.name === 'in-review')
+        );
+
+        document.getElementById('review-count').innerText = reviewIssues.length;
+
+        if (reviewIssues.length === 0) {
+          container.innerHTML = `
+            <div class="p-8 text-center text-gray-500 text-sm">
+              <i class="fa-solid fa-clock-rotate-left text-3xl text-gray-300 mb-2"></i>
+              <p class="font-medium text-gray-700">Nenhuma submissão em revisão neste momento.</p>
+              <p class="text-xs text-gray-500 mt-1">Submeta seu repositório para iniciar uma nova rodada de revisão por pares aberta!</p>
+              <a href="https://github.com/rbcs-journal/reviews/issues/new/choose" target="_blank" class="mt-4 inline-block px-4 py-2 bg-emerald-600 text-white rounded text-xs font-semibold hover:bg-emerald-700 transition">
+                Iniciar Submissão
+              </a>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = reviewIssues.map(iss => {
+          const isPre = iss.labels.some(l => l.name === 'pre-review');
+          const badgeClass = isPre ? 'bg-amber-100 text-amber-800' : 'bg-blue-100 text-blue-800';
+          const stageName = isPre ? 'Pre-Review' : 'Em Revisão por Pares';
+          return `
+            <div class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition space-y-1">
+              <div class="flex items-center justify-between text-xs">
+                <span class="px-2 py-0.5 rounded font-bold ${badgeClass}">${stageName}</span>
+                <span class="text-gray-400">Issue #${iss.number}</span>
+              </div>
+              <h3 class="font-bold text-sm text-gray-900">
+                <a href="${iss.html_url}" target="_blank" class="hover:text-emerald-700">${iss.title}</a>
+              </h3>
+              <div class="text-xs text-gray-500 flex items-center space-x-3 pt-1">
+                <span>Autor: @${iss.user.login}</span>
+                <span>•</span>
+                <span>${iss.comments} comentários</span>
+                <span>•</span>
+                <a href="${iss.html_url}" target="_blank" class="text-emerald-600 font-semibold hover:underline">Ver thread no GitHub →</a>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+      } catch (e) {
+        container.innerHTML = `
+          <div class="p-4 text-center text-xs text-gray-500">
+            Nenhuma submissão ativa detectada no momento. <br>
+            <a href="https://github.com/rbcs-journal/reviews/issues" target="_blank" class="text-emerald-600 font-medium underline">Abrir repositório de reviews</a>
+          </div>
+        `;
+      }
     }
 
     // Filter Logic
@@ -550,6 +616,7 @@
 
     // Initial render
     setLanguage(currentLang);
+    fetchActiveReviews();
   </script>
 </body>
 </html>
